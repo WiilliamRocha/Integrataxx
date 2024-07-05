@@ -1,0 +1,37 @@
+@import "bootstrap";
+
+.bg-custom-footer {
+  background-color: #9c5395; /* Define a cor de fundo do rodapé */
+}
+
+.navbar.bg-custom {
+  background-color: #4CAF50; /* Substitua pelo seu valor de cor desejado */
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #002147 !important; /* Azul marinho */
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+  color: #00122e !important; /* Tom mais escuro de azul marinho para o hover */
+}
+
+.logo {
+  height: 180px; /* Ajuste conforme necessário */
+  margin: 10px; /* Adiciona uma margem em volta da logo */
+}
+
+
+.navbar-nav {
+  font-size: 5rem; /* Aumenta o tamanho da fonte */
+}
+
+.navbar-nav .nav-link {
+  padding: 0.5rem 2rem; /* Ajusta o padding para espaçamento */
+}
+
+.navbar-nav .dropdown-menu {
+  font-size: 2rem; /* Tamanho da fonte dos itens do dropdown */
+}

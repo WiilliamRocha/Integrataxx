@@ -1,0 +1,29 @@
+// Import Bootstrap
+@import "bootstrap";
+
+// Your CSS partials
+@import "pages/home";
+@import "pages/services";
+@import "pages/about";
+@import "blogs/index";
+@import "font-awesome";
+@import "bootstrap";
+
+.navbar.bg-custom {
+  background-color: #6a3b66; /* Substitua pelo seu valor de cor desejado */
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #e9e9e9 !important; /* Azul marinho */
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+  color: #102952 !important; /* Tom mais escuro de azul marinho para o hover */
+}
+
+.logo {
+  height: 80px; /* Ajuste conforme necessário */
+  margin: 10px; /* Adiciona uma margem em volta da logo */
+}

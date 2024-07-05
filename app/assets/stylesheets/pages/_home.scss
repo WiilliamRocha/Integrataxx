@@ -1,0 +1,141 @@
+
+@import "bootstrap";
+
+// Estilos personalizados
+.navbar-nav .nav-item .nav-link {
+  margin-right: 1rem;
+}
+
+.navbar-brand {
+  margin-right: 2rem;
+}
+
+.navbar-nav .dropdown-menu {
+  min-width: 12rem;
+}
+
+.logo {
+  height: 90px;  // Ajuste a altura conforme necessário
+  border-radius: 50%;  // Torna a imagem redonda
+}
+
+.navbar-nav .nav-item .nav-link {
+  margin-right: 1rem;
+}
+
+.navbar-brand {
+  margin-right: 2rem;
+}
+
+.navbar-nav .dropdown-menu {
+  min-width: 12rem;
+}
+
+// Estilos personalizados
+.testimonial-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card .card-body {
+  padding: 2rem;
+}
+
+.icon {
+  width: 80px;
+  height: auto;
+}
+
+.partner-card {
+  height: 200px;
+  object-fit: cover;
+}
+
+.rounded-circle {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.header-bg {
+  background: url('header-bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: rgb(159, 213, 79);
+}
+
+.header-bg h1,
+.header-bg p {
+  color: rgb(66, 69, 77);
+}
+
+.section-title {
+  margin-bottom: 4rem;
+}
+
+
+.btn-custom {
+  background-color: #6a3b66; /* Cor de fundo personalizada */
+  border-color: #6a3b66; /* Cor da borda personalizada */
+  color: #ffffff; /* Cor do texto */
+}
+
+.btn-custom:hover {
+  background-color: darken(#6a3b66, 10%); /* Cor mais escura ao passar o mouse */
+  border-color: darken(#6a3b66, 10%); /* Cor da borda mais escura ao passar o mouse */
+}
+
+.btn-outline-custom {
+  border-color: #6a3b66; /* Cor da borda personalizada */
+  color: #6a3b66; /* Cor do texto */
+}
+
+.btn-outline-custom:hover {
+  background-color: #6a3b66; /* Cor de fundo ao passar o mouse */
+  color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+.bg-custom-footer {
+  background-color: #6a3b66; /* Define a cor de fundo do rodapé */
+  color: #ffffff; /* Define a cor do texto como branco para melhor contraste */
+}
+
+/* Classes específicas sem efeito de hover */
+.btn-no-hover {
+  background-color: #6a3b66; /* Cor de fundo personalizada */
+  border-color: #6a3b66; /* Cor da borda personalizada */
+  color: #ffffff; /* Cor do texto */
+}
+
+.btn-outline-no-hover {
+  border-color: #6a3b66; /* Cor da borda personalizada */
+  color: #6a3b66; /* Cor do texto */
+}
+
+
+.btn-no-hover {
+  background-color: #6a3b66;
+  color: #fff;
+  border: none;
+}
+
+.btn-no-hover:hover {
+  background-color: #5a2a56;
+}
+
+.btn-outline-no-hover {
+  background-color: #fff;
+  color: #6a3b66;
+  border: 2px solid #6a3b66;
+}
+
+.btn-outline-no-hover:hover {
+  background-color: #6a3b66;
+  color: #fff;
+}
+
+.header-bg {
+  background-color: #6a3b66;
+  color: white;
+}
+
+

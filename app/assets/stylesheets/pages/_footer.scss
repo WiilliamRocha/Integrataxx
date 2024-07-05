@@ -1,0 +1,56 @@
+.bg-custom-footer {
+  background-color: #6a3b66;
+  color: #ffffff;
+  padding: 3rem 0;
+}
+
+footer .container {
+  max-width: 1200px;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+footer i {
+  margin-right: 0.5rem;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #d4d4d4;
+}
+
+footer .fa-youtube {
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+footer .fa-youtube:hover {
+  color: #ff0000;
+}
+
+footer .text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer .col-md-3 {
+  flex: 1 1 200px;
+}
+
+footer .col-12 {
+  text-align: center;
+}
