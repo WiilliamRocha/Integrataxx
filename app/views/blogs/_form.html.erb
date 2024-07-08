@@ -1,8 +1,11 @@
-<%= form_with(model: blog, local: true) do |form| %>
-  <% if blog.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+<%= form_with(model: blog, local: true, html: { class: 'custom-form mx-auto', style: 'max-width: 600px;' }) do |form| %>
+  <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">  Crie um novo conteúdo 
+  </div>
 
+  <% if blog.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <h2><%= pluralize(blog.errors.count, "erro") %> impediram que este blog fosse salvo:</h2>
       <ul>
         <% blog.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -11,22 +14,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="form-group">
+    <%= form.label :title do %>
+      <i class="fas fa-heading"></i> Título
+    <% end %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+  <div class="form-group">
+    <%= form.label :content do %>
+      <i class="fas fa-align-left"></i> Conteúdo
+    <% end %>
+    <%= form.text_area :content, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :photo %>
-    <%= form.file_field :photo %>
+  <div class="form-group">
+    <%= form.label :photo do %>
+      <i class="fas fa-image"></i> Foto
+    <% end %>
+    <%= form.file_field :photo, class: 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group text-center">
+    <%= form.submit 'Salvar', class: 'btn btn-primary' %>
   </div>
 <% end %>

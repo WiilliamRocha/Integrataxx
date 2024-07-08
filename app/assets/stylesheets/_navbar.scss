@@ -1,37 +1,35 @@
-@import "bootstrap";
-
-.bg-custom-footer {
-  background-color: #9c5395; /* Define a cor de fundo do rodapé */
-}
-
-.navbar.bg-custom {
-  background-color: #4CAF50; /* Substitua pelo seu valor de cor desejado */
-}
-
-.navbar .nav-link,
-.navbar .navbar-brand {
-  color: #002147 !important; /* Azul marinho */
-}
-
-.navbar .nav-link:hover,
-.navbar .navbar-brand:hover {
-  color: #00122e !important; /* Tom mais escuro de azul marinho para o hover */
-}
-
-.logo {
-  height: 180px; /* Ajuste conforme necessário */
-  margin: 10px; /* Adiciona uma margem em volta da logo */
-}
-
-
-.navbar-nav {
-  font-size: 5rem; /* Aumenta o tamanho da fonte */
-}
+/* Exemplo: app/assets/stylesheets/application.css */
 
 .navbar-nav .nav-link {
-  padding: 0.5rem 2rem; /* Ajusta o padding para espaçamento */
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px; /* Aumente ou diminua este valor conforme necessário */
 }
 
-.navbar-nav .dropdown-menu {
-  font-size: 2rem; /* Tamanho da fonte dos itens do dropdown */
+.navbar-nav .nav-link:hover {
+  font-size: 20px; /* Aumente o tamanho da fonte ao passar o mouse, se desejar */
+}
+
+.navbar-brand .logo {
+  height: 120px; /* Aumentado o tamanho do logo */
+}
+
+/* Estilos personalizados para o dropdown */
+.dropdown-menu {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+.dropdown-item {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa; /* Cor de fundo ao passar o mouse */
+  border-radius: 10px;
+}
+
+.dropdown-item i {
+  margin-right: 10px; /* Espaçamento entre ícone e texto */
 }
