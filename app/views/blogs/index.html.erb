@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,80 +18,51 @@
       font-family: 'Roboto', sans-serif;
       background-color: #f0f2f5;
     }
-
     .card {
       border-radius: 15px;
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border: 2px solid #6a0dad;
+      border: none;
       transition: transform 0.3s ease;
     }
-
     .card:hover {
       transform: translateY(-10px);
     }
-
     .card-img-top {
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
     }
-
     .card-body {
+      padding: 20px;
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
     }
-
-    .btn-show-blog {
-      background-color: #6a0dad;
-      border: 1px solid #6a0dad;
-      color: #ffffff;
+    .btn {
       border-radius: 10px;
-      padding: 0.375rem 0.75rem;
-      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
-
-    .btn-show-blog:hover {
-      background-color: #5a0cac;
-      border-color: #5a0cac;
-      color: #ffffff;
+    .btn-outline-primary, .btn-outline-danger, .btn-outline-secondary {
+      border-radius: 10px;
     }
-
-    .btn-outline-secondary {
-      border-color: #6a0dad;
+    .btn-outline-primary {
       color: #6a0dad;
+      border-color: #6a0dad;
     }
-
-    .btn-outline-secondary:hover {
+    .btn-outline-primary:hover {
       background-color: #6a0dad;
-      color: #ffffff;
+      color: white;
     }
-
-    .btn-outline-danger {
-      border-color: #ff4d4d;
-      color: #ff4d4d;
+    .btn-outline-secondary {
+      color: #6c757d;
+      border-color: #6c757d;
     }
-
-    .btn-outline-danger:hover {
-      background-color: #ff4d4d;
-      color: #ffffff;
+    .btn-outline-secondary:hover {
+      background-color: #6c757d;
+      color: white;
     }
-
-    .new-blog {
-      text-align: center;
-    }
-
-    .modal-header {
-      border-bottom: none;
-    }
-
-    .modal-footer {
-      border-top: none;
-    }
-
     .truncate-text {
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3; /* number of lines to show */
+      -webkit-line-clamp: 5;
       overflow: hidden;
     }
   </style>
@@ -103,7 +74,6 @@
         <%= notice %>
       </div>
     <% end %>
-
     <div id="blogs" class="row">
       <% @blogs.each do |blog| %>
         <div class="col-md-4 mb-4">
@@ -111,29 +81,28 @@
             <% if blog.photo.attached? %>
               <%= image_tag url_for(blog.photo), class: "card-img-top", alt: blog.title %>
             <% else %>
-              <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541", class: "card-img-top", alt: blog.title %>
+              <%= image_tag "placeholder.jpg", class: "card-img-top", alt: "Placeholder" %>
             <% end %>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title"><%= blog.title %></h5>
               <div class="truncate-text">
                 <%= blog.content %>
               </div>
-              <button type="button" class="btn btn-link p-0 mt-auto" data-bs-toggle="modal" data-bs-target="#blogModal-<%= blog.id %>">Read more</button>
+              <a href="#" class="btn btn-link p-0 mt-auto" data-bs-toggle="modal" data-bs-target="#blogModal-<%= blog.id %>">Read more</a>
               <div class="actions mt-3">
                 <p>
-                  <%= link_to "Show this blog", blog, class: "btn-show-blog btn-sm d-block mb-2" %>
+                  <%= link_to "Show this blog", blog, class: "btn btn-outline-primary btn-sm d-block mb-2" %>
                 </p>
                 <div class="d-flex justify-content-between">
-                  <%= link_to "Edit", edit_blog_path(blog), class: "btn btn-outline-secondary btn-sm me-2" %>
-                  <%= button_to blog, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger btn-sm" do %>
-                    <i class="fa-solid fa-trash"></i> Apagar
+                  <%= link_to "Edit", edit_blog_path(blog), class: "btn btn-outline-secondary btn-sm" %>
+                  <%= button_to blog, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger btn-sm", form_class: "d-inline" do %>
+                    <i class="fas fa-trash"></i> Delete
                   <% end %>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <!-- Modal -->
         <div class="modal fade" id="blogModal-<%= blog.id %>" tabindex="-1" aria-labelledby="blogModalLabel-<%= blog.id %>" aria-hidden="true">
           <div class="modal-dialog">
@@ -146,19 +115,17 @@
                 <%= blog.content %>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type of="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
         </div>
       <% end %>
     </div>
-
     <div class="new-blog mt-5 mb-4">
       <%= link_to "New blog", new_blog_path, class: "btn btn-outline-primary" %>
     </div>
   </div>
-
   <!-- Bootstrap JS, Popper.js, and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

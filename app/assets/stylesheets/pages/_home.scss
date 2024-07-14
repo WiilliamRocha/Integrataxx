@@ -1,141 +1,157 @@
-
 @import "bootstrap";
 
-// Estilos personalizados
-.navbar-nav .nav-item .nav-link {
-  margin-right: 1rem;
+/* Cores personalizadas */
+:root {
+  --main-color: #6a3b66; /* Cor principal */
+  --hover-color: #8a5786; /* Cor para efeito hover */
+  --white: #8d8d8d;
 }
 
-.navbar-brand {
-  margin-right: 2rem;
+/* Estilos básicos do cabeçalho */
+.header-bg {
+  background-color: var(--main-color);
+  color: var(--white);
 }
 
-.navbar-nav .dropdown-menu {
-  min-width: 12rem;
+/* Botões personalizados */
+.btn-custom, .button, .whatsapp-button, .actions button {
+  background-color: var(--main-color);
+  color: var(--white);
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
 
-.logo {
-  height: 90px;  // Ajuste a altura conforme necessário
-  border-radius: 50%;  // Torna a imagem redonda
+.btn-custom:hover, .button:hover, .whatsapp-button:hover, .actions button:hover {
+  background-color: var(--hover-color);
 }
 
-.navbar-nav .nav-item .nav-link {
-  margin-right: 1rem;
+/* Configuração específica para botões sem efeito de hover */
+.btn-no-hover, .btn-outline-no-hover {
+  background-color: var(--main-color);
+  color: var(--white);
+  border: 2px solid var(--main-color);
 }
 
-.navbar-brand {
-  margin-right: 2rem;
+.btn-outline-no-hover:hover {
+  background-color: var(--main-color);
+  color: var(--white);
 }
 
-.navbar-nav .dropdown-menu {
-  min-width: 12rem;
+/* Botões de contorno sem hover */
+.btn-outline-no-hover {
+  background-color: var(--white);
+  color: var(--main-color);
 }
 
-// Estilos personalizados
-.testimonial-card {
+/* Fundo e texto personalizados para o rodapé */
+.bg-custom-footer {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+
+/* Configurações da seção principal */
+.support-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Configurações para os passos */
+.steps {
+  width: 80%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.step i {
+  margin-right: 15px;
+  color: var(--main-color);
+}
+
+.step p {
+  margin: 0;
+}
+
+/* Cartões de testemunho e parceiros */
+.testimonial-card, .partner-card {
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  object-fit: cover;
 }
 
 .testimonial-card .card-body {
   padding: 2rem;
 }
 
-.icon {
-  width: 80px;
-  height: auto;
-}
-
-.partner-card {
-  height: 200px;
-  object-fit: cover;
-}
-
-.rounded-circle {
+/* Configurações para ícones */
+.icon, .rounded-circle {
   width: 80px;
   height: 80px;
   object-fit: cover;
 }
 
-.header-bg {
-  background: url('header-bg.jpg') no-repeat center center;
-  background-size: cover;
-  color: rgb(159, 213, 79);
+.icon {
+  width: 100px; /* Mantenha ou ajuste a largura conforme necessário */
+  height: 100px; /* Ajuste a altura para ser igual à largura para garantir a forma circular */
+  border-radius: 50%; /* Torna a imagem redonda */
+  object-fit: cover; /* Garante que a imagem cubra completamente a área sem distorção */
 }
 
-.header-bg h1,
-.header-bg p {
-  color: rgb(66, 69, 77);
+.bg-light {
+  background-color: #e6dcef; /* Um tom claro de roxo */
+  padding: 30px 0; /* Adiciona uma margem vertical para a seção */
 }
-
-.section-title {
-  margin-bottom: 4rem;
+.stats {
+  font-size: 2rem; /* Aumenta o tamanho da fonte para os números */
+  color: #6a3b66; /* Cor roxa para os números e títulos */
+  margin-bottom: 5px; /* Espaço abaixo dos números */
 }
-
-
-.btn-custom {
-  background-color: #6a3b66; /* Cor de fundo personalizada */
-  border-color: #6a3b66; /* Cor da borda personalizada */
-  color: #ffffff; /* Cor do texto */
-}
-
-.btn-custom:hover {
-  background-color: darken(#6a3b66, 10%); /* Cor mais escura ao passar o mouse */
-  border-color: darken(#6a3b66, 10%); /* Cor da borda mais escura ao passar o mouse */
-}
-
-.btn-outline-custom {
-  border-color: #6a3b66; /* Cor da borda personalizada */
-  color: #6a3b66; /* Cor do texto */
-}
-
-.btn-outline-custom:hover {
-  background-color: #6a3b66; /* Cor de fundo ao passar o mouse */
-  color: #ffffff; /* Cor do texto ao passar o mouse */
-}
-
-.bg-custom-footer {
-  background-color: #6a3b66; /* Define a cor de fundo do rodapé */
-  color: #ffffff; /* Define a cor do texto como branco para melhor contraste */
-}
-
-/* Classes específicas sem efeito de hover */
-.btn-no-hover {
-  background-color: #6a3b66; /* Cor de fundo personalizada */
-  border-color: #6a3b66; /* Cor da borda personalizada */
-  color: #ffffff; /* Cor do texto */
-}
-
-.btn-outline-no-hover {
-  border-color: #6a3b66; /* Cor da borda personalizada */
-  color: #6a3b66; /* Cor do texto */
+.stats p {
+  font-size: 1.2rem; /* Tamanho da fonte para as descrições */
+  color: #333; /* Cor mais escura para o texto */
 }
 
 
-.btn-no-hover {
-  background-color: #6a3b66;
-  color: #fff;
+.testimonial-card {
+  margin: 10px;
   border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-
-.btn-no-hover:hover {
-  background-color: #5a2a56;
+.testimonial-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
-
-.btn-outline-no-hover {
-  background-color: #fff;
-  color: #6a3b66;
-  border: 2px solid #6a3b66;
-}
-
-.btn-outline-no-hover:hover {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
   background-color: #6a3b66;
-  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
 }
-
-.header-bg {
-  background-color: #6a3b66;
-  color: white;
+.carousel-item {
+  margin: 20px 0;
 }
-
-
