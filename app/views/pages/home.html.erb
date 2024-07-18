@@ -100,7 +100,7 @@
       font-size: 1.2rem; /* Tamanho da fonte para as descrições */
       color: #333; /* Cor mais escura para o texto */
     }
-  
+
     .testimonial-card {
       margin: 10px;
       border: none;
@@ -134,27 +134,24 @@
     </div>
   </header>
 
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="row text-center">
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center">
+      <% ["logo72.png", "logo5.jpeg", "logo4.jpeg"].each_with_index do |image, index| %>
         <div class="col-md-4 mb-4">
-          <img src="./images/logo12.png" alt="10 anos de expertise contábil" class="icon mb-3">
-          <h3>20 anos de expertise contábil</h3>
-          <p>Entregamos uma contabilidade segura e digital para você.</p>
+          <div class="card">
+            <%= image_tag(image, alt: "Imagem #{index + 1}", class: "card-img-top") %>
+            <div class="card-body">
+              <h3><%= ["20 anos de expertise contábil", "CNPJ rápido", "Emissão de notas com 1 clique"][index] %></h3>
+              <p><%= ["Entregamos uma contabilidade segura e digital para você.", "Cuidamos de todo o processo sem você se preocupar com a abertura.", "Economize tempo para focar no que importa: seu trabalho."][index] %></p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="./images/logo10.png" alt="CNPJ rápido e sem custo" class="icon mb-3">
-          <h3>CNPJ rápido</h3>
-          <p>Cuidamos de todo o processo sem você se preocupar com a abertura.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="./images/logo18.png" alt="Emissão de notas com 1 clique" class="icon mb-3">
-          <h3>Emissão de notas com 1 clique</h3>
-          <p>Economize tempo para focar no que importa: seu trabalho.</p>
-        </div>
-      </div>
+      <% end %>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <section class="py-5">
     <div class="container">
@@ -218,17 +215,18 @@
       <h2 class="text-center mb-4">Áreas de Atuação</h2>
       <div class="row text-center">
         <div class="col-md-4 mb-4">
-          <img src=".images/medicos.jpg" alt="Contabilidade para Médicos" class="img-fluid rounded-circle mb-3" style="width: 140px; height: 140px;">
+          <%= image_tag("medicos.jpg", alt: "Contabilidade para Profissionais de TI", class: "img-fluid rounded-circle mb-3", style: "width: 140px; height: 140px;") %>
           <h4>Médicos</h4>
           <p>Contabilidade especializada para médicos.</p>
         </div>
         <div class="col-md-4 mb-4">
-          <img src="dentistas.webp" alt="Contabilidade para Dentistas" class="img-fluid rounded-circle mb-3" style="width: 200px; height: 200px;">
+              <%= image_tag("dentistas.webp", alt: "Contabilidade para Profissionais de TI", class: "img-fluid rounded-circle mb-3", style: "width: 140px; height: 140px;") %>
+
           <h4>Dentistas</h4>
           <p>Contabilidade personalizada para dentistas.</p>
         </div>
         <div class="col-md-4 mb-4">
-          <img src="Profissionais.do.ti.jpg" alt="Contabilidade para Profissionais de TI" class="img-fluid rounded-circle mb-3" style="width: 140px; height: 140px;">
+       <%= image_tag("Profissionais.do.ti.jpg", alt: "Contabilidade para Profissionais de TI", class: "img-fluid rounded-circle mb-3", style: "width: 140px; height: 140px;") %>
           <h4>Profissionais de TI</h4>
           <p>Serviços contábeis focados em tecnologia da informação.</p>
         </div>

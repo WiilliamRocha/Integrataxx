@@ -1,35 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Description</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descrição de Serviços - Integratax</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #6a3b66;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      border-bottom: 5px solid #dec1f3;
+    }
+    .container {
+      padding-top: 20px;
+    }
+    .benefit-icon {
+      color: #6a3b66;
+      margin-right: 10px;
+    }
+    .list-unstyled li {
+      background-color: white;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .list-unstyled li:hover {
+      background-color: #f8f8f8;
+    }
+    .footer {
+      background-color: #4a2040;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    h2 .highlight {
+      color: #007bff;
+    }
+    .column {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 576px) {
+      h2 {
+        font-size: 20px;
+      }
+      p, ul li {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header class="header">
+    <h1>Descrição de Serviços</h1>
+    <p><strong>Veja o que você e nós faremos para o sucesso do seu negócio.</strong></p>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 column">
+        <h2>O QUE <span class="highlight">VOCÊ</span> VAI FAZER</h2>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-file-invoice benefit-icon"></i>Emitir as notas fiscais e importar seu extrato mensal para nossa equipe.</li>
+          <li><i class="fas fa-headset benefit-icon"></i>Resolver as suas dúvidas com nosso atendimento.</li>
+        </ul>
+      </div>
+      <div class="col-md-6 column">
+        <h2>O QUE <span class="highlight">NÓS</span> VAMOS FAZER</h2>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-clipboard-check benefit-icon"></i>Entregamos uma contabilidade completa.</li>
+          <li><i class="fas fa-balance-scale benefit-icon"></i>Mantemos a sua empresa em dia com todas as obrigações do governo, com o IRPJ incluso.</li>
+          <li><i class="fas fa-phone-alt benefit-icon"></i>Disponibilizamos nosso atendimento rápido por diversos canais: telefone, WhatsApp, chat e e-mail.</li>
+          <li><i class="fas fa-receipt benefit-icon"></i>Disponibilizamos nosso emissor gratuito de nota fiscal e boleto.</li>
+          <li><i class="fas fa-calculator benefit-icon"></i>Calculamos as guias de impostos, folha de pagamento e pró-labore.</li>
+          <li><i class="fas fa-chart-line benefit-icon"></i>Fazemos e assinamos relatórios contábeis como o balanço, DRE e muitos outros.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-5 text-center">
     <div class="container">
-        <div class="column">
-            <h2>O QUE <span class="highlight">VOCÊ</span> VAI FAZER</h2>
-            <ul>
-                <li>Emitir as notas fiscais e importar seu extrato mensal na nossa plataforma.</li>
-                <li>Resolver as suas dúvidas com nosso atendimento.</li>
-            </ul>
-        </div>
-        <div class="column">
-            <h2>O QUE <span class="highlight">NÓS</span> VAMOS FAZER</h2>
-            <ul>
-                <li>Entregamos uma contabilidade completa.</li>
-                <li>Mantemos a sua empresa em dia com todas as obrigações do governo, com o IRPJ incluso.</li>
-                <li>Disponibilizamos nosso atendimento rápido por diversos canais: telefone, WhatsApp, chat e e-mail.</li>
-                <li>Disponibilizamos nosso emissor gratuito de nota fiscal e boleto.</li>
-                <li>Calculamos as guias de impostos, folha de pagamento e pró-labore.</li>
-                <li>Fazemos e assinamos relatórios contábeis como o balanço, DRE e muitos outros.</li>
-            </ul>
-        </div>
+      <h2 class="mb-4">Fale com um especialista</h2>
+      <p class="lead mb-4">Tem alguma dúvida? Entre em contato conosco para saber mais sobre nossos serviços.</p>
+      <a href="https://api.whatsapp.com/send?phone=11987602636" class="btn btn-no-hover btn-lg">Fale pelo WhatsApp</a>
     </div>
-    <img src="icon-house.png" alt="House Icon" class="icon">
-    <div class="footer">
-        Economize mais de 80% por mês.
-    </div>
+  </section>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
+
